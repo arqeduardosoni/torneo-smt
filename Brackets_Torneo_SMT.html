@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Brackets · Torneo SMT 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{
+ --navy:#081427; --navy2:#0e2240; --navy3:#143258; --ink:#06101f;
+ --cyan:#34b4ec; --cyan2:#7adcff; --lime:#ccff00; --white:#fff; --muted:#9fb6d6; --line:rgba(255,255,255,.07);
+ --green:#39e08a; --amber:#ffce5c; --red:#ff7b7b;
+ --di:#7adcff; --dd:#39e08a; --cc:#ffce5c; --fem:#ff85b0; --ab:#c79bff;
+ --cardbg:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.012));
+ --soft:0 18px 44px -38px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Barlow Condensed',sans-serif;color:var(--white);background:var(--navy);letter-spacing:.2px;position:relative;
+ background-image:radial-gradient(1100px 520px at 88% -8%,rgba(52,180,236,.20),transparent 60%),radial-gradient(900px 480px at -8% 108%,rgba(204,255,0,.07),transparent 60%),linear-gradient(180deg,#0b1c38,#070f1f);
+ padding:30px 18px 60px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;position:relative;z-index:1}
+h1,h2,h3,.cond{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px}
+.fade{background:var(--cardbg);backdrop-filter:blur(13px) saturate(135%);-webkit-backdrop-filter:blur(13px) saturate(135%);border:none;box-shadow:var(--soft)}
+/* HERO */
+.hdr{position:relative;display:flex;align-items:center;gap:24px;padding:24px 28px;margin-bottom:24px;border-radius:22px;
+ background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.01));backdrop-filter:blur(16px) saturate(135%);-webkit-backdrop-filter:blur(16px) saturate(135%);
+ box-shadow:var(--soft);overflow:hidden}
+.hdr::after{content:"";position:absolute;right:-30px;top:-50px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(204,255,0,.10),transparent 70%)}
+.hdr img{width:120px;height:auto;filter:drop-shadow(0 10px 26px rgba(0,0,0,.55));position:relative;z-index:1;border-radius:14px}
+.hdr .t{position:relative;z-index:1}
+.hdr .t h1{font-size:42px;font-weight:900;line-height:.9}
+.hdr .t h1 span{color:var(--cyan2)}
+.hdr .t p{color:#cfe0f5;font-size:15px;margin-top:7px;font-weight:500;letter-spacing:.4px}
+.herofoot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:13px}
+.badge{display:inline-block;background:var(--lime);color:#172a06;font-weight:800;text-transform:uppercase;font-size:13px;padding:5px 14px;border-radius:30px;letter-spacing:1.2px}
+.loc{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:5px 14px 5px 10px;border-radius:30px;font-weight:600;font-size:14px;color:#dbe9ff;letter-spacing:.5px}
+.loc svg{width:16px;height:16px;display:block}
+.note-top{font-size:14.5px;color:#cfe0f5;margin:0 0 26px;line-height:1.55;background:var(--cardbg);backdrop-filter:blur(13px);-webkit-backdrop-filter:blur(13px);border-radius:14px;padding:14px 17px;box-shadow:var(--soft);font-weight:400}
+.note-top b{color:#eaf3ff;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:30px}
+.kpi{background:var(--cardbg);backdrop-filter:blur(13px) saturate(135%);-webkit-backdrop-filter:blur(13px) saturate(135%);border-radius:16px;padding:17px 19px;box-shadow:var(--soft)}
+.kpi .n{font-weight:900;font-size:42px;line-height:1}
+.kpi .l{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;margin-top:5px;font-weight:600}
+.kpi.green .n{color:var(--green)}.kpi.amber .n{color:var(--amber)}.kpi.cyan .n{color:var(--cyan2)}.kpi.red .n{color:var(--red)}
+.cat{background:var(--cardbg);backdrop-filter:blur(13px) saturate(135%);-webkit-backdrop-filter:blur(13px) saturate(135%);border-radius:16px;overflow:hidden;margin-bottom:18px;box-shadow:var(--soft)}
+.cat h3{font-size:20px;font-weight:800;padding:13px 18px;text-transform:uppercase;letter-spacing:.7px;background:linear-gradient(90deg,rgba(255,255,255,.05),transparent);display:flex;align-items:center;gap:10px}
+.cat.c-di{--accent:var(--di)}.cat.c-d{--accent:var(--dd)}.cat.c-c{--accent:var(--cc)}.cat.c-fem{--accent:var(--fem)}.cat.c-ab{--accent:var(--ab)}
+.cat h3 .accent{color:var(--accent,var(--cyan2))}
+.gwrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px;padding:15px}
+.gbox{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.008));border-radius:13px;padding:12px 15px}
+.gbox .gh{font-weight:800;color:var(--accent,var(--lime));text-transform:uppercase;font-size:15px;margin-bottom:8px;letter-spacing:.6px}
+.gbox ul{list-style:none}.gbox li{font-size:15px;color:#e0eaf8;padding:3px 0;display:flex;gap:8px;font-weight:400;letter-spacing:.3px}
+.gbox li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent,var(--cyan));margin-top:8px;flex:none}
+@media(max-width:720px){.gwrap{grid-template-columns:1fr}}
+.wkh2{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:18px 0 14px;padding:4px 4px 11px}
+.wkh2 b{font-weight:900;font-size:28px;text-transform:uppercase;color:var(--cyan2)}
+.wkh2 span{color:#cfe0f5;font-size:15px}
+.wkh2 em{margin-left:auto;font-style:normal;font-weight:700;color:#172a06;background:var(--lime);font-size:13px;text-transform:uppercase;padding:3px 13px;border-radius:20px;letter-spacing:.5px}
+.daywrap{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.day{background:var(--cardbg);backdrop-filter:blur(13px) saturate(135%);-webkit-backdrop-filter:blur(13px) saturate(135%);border-radius:15px;overflow:hidden;box-shadow:var(--soft)}
+.dayh{background:linear-gradient(90deg,rgba(255,255,255,.06),transparent);padding:10px 16px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;font-size:16px;color:#fff}
+.slot{display:flex;align-items:center;gap:10px;padding:9px 16px;font-size:14px}
+.slot+.slot{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+.time{font-weight:800;color:var(--lime);min-width:56px;font-size:15px}
+.court{color:var(--cyan2);font-size:11.5px;min-width:52px;text-transform:uppercase;font-weight:600}
+.cat2{font-weight:700;color:#9fb6d6;min-width:92px;text-transform:uppercase;font-size:12px}
+.match{color:#eaf3ff;flex:1;font-weight:500;letter-spacing:.3px}.match i{color:var(--muted);font-style:normal;font-size:12px;font-weight:400}
+@media(max-width:720px){.daywrap{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.hdr{flex-direction:column;text-align:center}}
+.foot{display:flex;align-items:center;justify-content:center;gap:11px;text-align:center;color:#6a82a8;font-size:13px;margin-top:44px;padding-top:20px;letter-spacing:1.3px;text-transform:uppercase;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.foot img{width:32px;opacity:.85;border-radius:7px}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+@media print{
+ body{padding:8px 6px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .wrap{max-width:100%}
+ .cat,.day,.kpi,.catsec,.mbox,.gbox,.pcard,.note-top{break-inside:avoid;page-break-inside:avoid}
+ .hdr{break-inside:avoid}
+ .bracket{overflow:visible}
+ a{color:inherit}
+}
+@page{margin:10mm;background:#081427}
+@media print{section:not(:first-of-type){break-before:page;page-break-before:always}}
+
+.proj{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:30px}
+.pcard{background:var(--cardbg);backdrop-filter:blur(13px);-webkit-backdrop-filter:blur(13px);border-top:2px solid rgba(204,255,0,.5);border-radius:14px;padding:14px 16px;box-shadow:var(--soft)}
+.pcard h4{font-family:'Barlow Condensed';text-transform:uppercase;font-size:16px;color:var(--lime);letter-spacing:.6px;margin-bottom:6px}
+.pcard p{font-size:12.5px;color:#c2d2ea;line-height:1.55}.pcard p b{color:#eaf3ff}
+.catsec{margin-bottom:38px}
+.catt{display:flex;align-items:center;gap:11px;margin:0 0 7px}
+.catt h2{font-family:'Barlow Condensed';font-weight:900;font-size:28px;text-transform:uppercase;letter-spacing:.5px}
+.catt .bar{height:22px;width:6px;background:var(--accent,var(--lime));border-radius:4px;box-shadow:0 0 14px var(--accent,var(--lime))}
+.catsec.c-di{--accent:var(--di)}.catsec.c-d{--accent:var(--dd)}.catsec.c-c{--accent:var(--cc)}.catsec.c-fem{--accent:var(--fem)}.catsec.c-ab{--accent:var(--ab)}
+.qual{font-size:13px;color:#9fb4d4;margin:0 0 18px;line-height:1.55;background:var(--cardbg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:11px;padding:11px 15px;box-shadow:var(--soft)}
+.qual b{color:var(--accent,var(--cyan2))}
+.bracket{display:flex;gap:30px;overflow-x:auto;padding:8px 2px 14px}
+.round{display:flex;flex-direction:column;justify-content:space-around;min-width:196px}
+.rtitle{font-family:'Barlow Condensed';text-transform:uppercase;font-size:12px;letter-spacing:1.5px;color:var(--accent,var(--cyan2));text-align:center;margin-bottom:8px;font-weight:800}
+.mbox{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.012));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:11px;margin:11px 0;box-shadow:var(--soft);transition:transform .15s}
+.mbox:hover{transform:translateY(-1px)}
+.seed{display:flex;align-items:center;gap:9px;padding:9px 12px;font-size:12.5px;color:#eaf3ff}
+.seed+.seed{border-top:1px solid var(--line)}
+.seed .sd{font-family:'Barlow Condensed';font-weight:800;color:var(--accent,var(--lime));min-width:20px;font-size:13px;text-align:center;background:rgba(255,255,255,.05);border-radius:5px;padding:1px 0}
+.champ{display:flex;align-items:center;justify-content:center;min-width:180px}
+.champ .box{background:linear-gradient(160deg,rgba(204,255,0,.14),rgba(52,180,236,.04));border-radius:12px;padding:20px 16px;text-align:center;box-shadow:var(--soft)}
+.champ .box .t{font-family:'Barlow Condensed';font-weight:900;text-transform:uppercase;color:var(--lime);font-size:17px}
+.champ .box .s{font-size:12px;color:var(--muted);margin-top:4px}
+</style></head><body><div class="wrap">
+<div class="hdr"><img src="smt_brand_logo.png" alt="SMT"><div class="t"><h1>BRACKETS<br><span>TORNEO SMT 2026</span></h1><p>Grupos (15 jun–12 jul) → Desempates (13–16 jul) → Eliminatorias (17–19 jul)</p><div class="herofoot"><span class="badge">Proyección oficial</span><span class="loc"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-7.1 7-12.2C19 5.6 15.9 2.6 12 2.6 8.1 2.6 5 5.6 5 9.8 5 14.9 12 22 12 22z" fill="#ccff00"/><circle cx="12" cy="10" r="2.5" fill="#0e2240"/></svg>Centro Tenístico</span></div></div></div>
+<p class="note-top">Así se proyecta el torneo con los grupos actuales. Los nombres en los cuadros son los <b>lugares de clasificación</b> (se llenan al cerrar la fase de grupos). Los jugadores <b>empatados</b> por un boleto juegan una <b>ronda de desempate del 13 al 16 jul</b>; las <b>eliminatorias</b> se juegan el 17, 18 y 19 jul.</p><div class="proj">
+<div class="pcard"><h4>1 · Fase de grupos</h4><p>15 jun – 12 jul (4 semanas). <b>1 juego por jugador por semana.</b> En Di, D y C cada quien juega 3.</p></div>
+<div class="pcard"><h4>2 · Ronda de desempates</h4><p><b>13 – 16 jul.</b> Quienes terminen <b>empatados</b> por un boleto juegan un <b>partido de desempate</b> para definir quién entra a la eliminatoria.</p></div>
+<div class="pcard"><h4>3 · Eliminatorias</h4><p><b>17, 18 y 19 jul.</b> Cuadros de 8 (Di, D, C), de 4 (Femenil) y Abierta directa.</p></div>
+</div><div class="catsec c-di"><div class="catt"><span class="bar"></span><h2>Di Varonil</h2></div><p class="qual"><b>11 jugadores · 2 grupos (6 y 5) · 3 juegos c/u.</b> Clasifican los <b>4 mejores de cada grupo (8 en total)</b> a cuartos de final. Empates por un boleto → <b>ronda de desempate 13–16 jul</b> (partido directo).</p><div class="bracket"><div class="round"><div class="rtitle">Cuartos de final</div><div class="mbox"><div class="seed"><span class="sd">1A</span>1º Grupo A</div><div class="seed"><span class="sd">4B</span>4º Grupo B</div></div><div class="mbox"><div class="seed"><span class="sd">2B</span>2º Grupo B</div><div class="seed"><span class="sd">3A</span>3º Grupo A</div></div><div class="mbox"><div class="seed"><span class="sd">1B</span>1º Grupo B</div><div class="seed"><span class="sd">4A</span>4º Grupo A</div></div><div class="mbox"><div class="seed"><span class="sd">2A</span>2º Grupo A</div><div class="seed"><span class="sd">3B</span>3º Grupo B</div></div></div><div class="round"><div class="rtitle">Semifinales</div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador CF1</div><div class="seed"><span class="sd">G</span>Ganador CF2</div></div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador CF3</div><div class="seed"><span class="sd">G</span>Ganador CF4</div></div></div><div class="round"><div class="rtitle">Final</div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador SF1</div><div class="seed"><span class="sd">G</span>Ganador SF2</div></div></div><div class="champ"><div class="box"><div class="t">🏆 Campeón</div><div class="s">Ganador de la final</div></div></div></div></div><div class="catsec c-d"><div class="catt"><span class="bar"></span><h2>D Varonil</h2></div><p class="qual"><b>25 jugadores · 5 grupos · 3 juegos c/u.</b> Clasifican 8: los <b>5 ganadores de grupo</b> + los <b>3 mejores segundos lugares</b>. Empates por un boleto → <b>ronda de desempate 13–16 jul</b> (partido directo).</p><div class="bracket"><div class="round"><div class="rtitle">Cuartos de final</div><div class="mbox"><div class="seed"><span class="sd">1A</span>1º Grupo A</div><div class="seed"><span class="sd">2x</span>3er Mejor 2º</div></div><div class="mbox"><div class="seed"><span class="sd">1C</span>1º Grupo C</div><div class="seed"><span class="sd">2x</span>2º Mejor 2º</div></div><div class="mbox"><div class="seed"><span class="sd">1B</span>1º Grupo B</div><div class="seed"><span class="sd">1E</span>1º Grupo E</div></div><div class="mbox"><div class="seed"><span class="sd">1D</span>1º Grupo D</div><div class="seed"><span class="sd">2x</span>Mejor 2º</div></div></div><div class="round"><div class="rtitle">Semifinales</div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador CF1</div><div class="seed"><span class="sd">G</span>Ganador CF2</div></div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador CF3</div><div class="seed"><span class="sd">G</span>Ganador CF4</div></div></div><div class="round"><div class="rtitle">Final</div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador SF1</div><div class="seed"><span class="sd">G</span>Ganador SF2</div></div></div><div class="champ"><div class="box"><div class="t">🏆 Campeón</div><div class="s">Ganador de la final</div></div></div></div></div><div class="catsec c-c"><div class="catt"><span class="bar"></span><h2>C Varonil</h2></div><p class="qual"><b>14 jugadores · 3 grupos · 3 juegos c/u.</b> Clasifican 8: los <b>3 ganadores</b> + los <b>3 segundos</b> + los <b>2 mejores 3ros</b>. Empates por un boleto → <b>ronda de desempate 13–16 jul</b> (partido directo).</p><div class="bracket"><div class="round"><div class="rtitle">Cuartos de final</div><div class="mbox"><div class="seed"><span class="sd">1A</span>1º Grupo A</div><div class="seed"><span class="sd">3</span>Mejor 3º</div></div><div class="mbox"><div class="seed"><span class="sd">2C</span>2º Grupo C</div><div class="seed"><span class="sd">1B</span>1º Grupo B</div></div><div class="mbox"><div class="seed"><span class="sd">1C</span>1º Grupo C</div><div class="seed"><span class="sd">2B</span>2º Grupo B</div></div><div class="mbox"><div class="seed"><span class="sd">3</span>2º Mejor 3º</div><div class="seed"><span class="sd">2A</span>2º Grupo A</div></div></div><div class="round"><div class="rtitle">Semifinales</div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador CF1</div><div class="seed"><span class="sd">G</span>Ganador CF2</div></div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador CF3</div><div class="seed"><span class="sd">G</span>Ganador CF4</div></div></div><div class="round"><div class="rtitle">Final</div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador SF1</div><div class="seed"><span class="sd">G</span>Ganador SF2</div></div></div><div class="champ"><div class="box"><div class="t">🏆 Campeón</div><div class="s">Ganador de la final</div></div></div></div></div><div class="catsec c-fem"><div class="catt"><span class="bar"></span><h2>D Femenil</h2></div><p class="qual"><b>6 jugadoras · 1 grupo · 3 juegos c/u.</b> Clasifican las <b>4 mejores</b> a semifinales (1ª vs 4ª, 2ª vs 3ª). Empate por un boleto → <b>ronda de desempate 13–16 jul</b> (partido directo).</p><div class="bracket"><div class="round"><div class="rtitle">Semifinales</div><div class="mbox"><div class="seed"><span class="sd">1</span>1º del grupo</div><div class="seed"><span class="sd">4</span>4º del grupo</div></div><div class="mbox"><div class="seed"><span class="sd">2</span>2º del grupo</div><div class="seed"><span class="sd">3</span>3º del grupo</div></div></div><div class="round"><div class="rtitle">Final</div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador SF1</div><div class="seed"><span class="sd">G</span>Ganador SF2</div></div></div><div class="champ"><div class="box"><div class="t">🏆 Campeona</div><div class="s">Ganador de la final</div></div></div></div></div><div class="catsec c-ab"><div class="catt"><span class="bar"></span><h2>Abierta Varonil</h2></div><p class="qual"><b>10 jugadores · eliminatoria directa · 17, 18 y 19 jul.</b> <b>2 repechajes:</b> Alan López vs Eugenio (Game), y Adrián Cárdenas de Hoyos vs Yeshua Castro; los 2 ganadores entran a cuartos. Los otros <b>6 pasan directo</b>.</p><div class="bracket"><div class="round"><div class="rtitle">Repechajes</div><div class="mbox"><div class="seed"><span class="sd">R</span>Alan López</div><div class="seed"><span class="sd">R</span>Eugenio (Game)</div></div><div class="mbox"><div class="seed"><span class="sd">R</span>Adrián Cárdenas de Hoyos</div><div class="seed"><span class="sd">R</span>Yeshua Castro</div></div></div></div><div class="bracket"><div class="round"><div class="rtitle">Cuartos de final</div><div class="mbox"><div class="seed"><span class="sd">1</span>Leonardo Aguilar</div><div class="seed"><span class="sd">G</span>Ganador Repechaje 1</div></div><div class="mbox"><div class="seed"><span class="sd">4</span>Normando Gutiérrez</div><div class="seed"><span class="sd">5</span>Rafael Arenas</div></div><div class="mbox"><div class="seed"><span class="sd">3</span>David Farías</div><div class="seed"><span class="sd">6</span>Miguel Ponce</div></div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador Repechaje 2</div><div class="seed"><span class="sd">2</span>Jesús Hernández</div></div></div><div class="round"><div class="rtitle">Semifinales</div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador CF1</div><div class="seed"><span class="sd">G</span>Ganador CF2</div></div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador CF3</div><div class="seed"><span class="sd">G</span>Ganador CF4</div></div></div><div class="round"><div class="rtitle">Final</div><div class="mbox"><div class="seed"><span class="sd">G</span>Ganador SF1</div><div class="seed"><span class="sd">G</span>Ganador SF2</div></div></div><div class="champ"><div class="box"><div class="t">🏆 Campeón</div><div class="s">Ganador de la final</div></div></div></div></div><div class="foot"><img src="smt_brand_logo.png">Sociedad Mexicana de Tenis · Gran Torneo 2026 · Centro Tenístico</div></div></body></html>

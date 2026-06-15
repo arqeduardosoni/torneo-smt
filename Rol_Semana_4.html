@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ROL · SEMANA 4<br><span>TORNEO SMT 2026</span></title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{
+ --navy:#081427; --navy2:#0e2240; --navy3:#143258; --ink:#06101f;
+ --cyan:#34b4ec; --cyan2:#7adcff; --lime:#ccff00; --white:#fff; --muted:#9fb6d6; --line:rgba(255,255,255,.07);
+ --green:#39e08a; --amber:#ffce5c; --red:#ff7b7b;
+ --di:#7adcff; --dd:#39e08a; --cc:#ffce5c; --fem:#ff85b0; --ab:#c79bff;
+ --cardbg:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.012));
+ --soft:0 18px 44px -38px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Barlow Condensed',sans-serif;color:var(--white);background:var(--navy);letter-spacing:.2px;position:relative;
+ background-image:radial-gradient(1100px 520px at 88% -8%,rgba(52,180,236,.20),transparent 60%),radial-gradient(900px 480px at -8% 108%,rgba(204,255,0,.07),transparent 60%),linear-gradient(180deg,#0b1c38,#070f1f);
+ padding:30px 18px 60px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;position:relative;z-index:1}
+h1,h2,h3,.cond{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.5px}
+.fade{background:var(--cardbg);backdrop-filter:blur(13px) saturate(135%);-webkit-backdrop-filter:blur(13px) saturate(135%);border:none;box-shadow:var(--soft)}
+/* HERO */
+.hdr{position:relative;display:flex;align-items:center;gap:24px;padding:24px 28px;margin-bottom:24px;border-radius:22px;
+ background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.01));backdrop-filter:blur(16px) saturate(135%);-webkit-backdrop-filter:blur(16px) saturate(135%);
+ box-shadow:var(--soft);overflow:hidden}
+.hdr::after{content:"";position:absolute;right:-30px;top:-50px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(204,255,0,.10),transparent 70%)}
+.hdr img{width:120px;height:auto;filter:drop-shadow(0 10px 26px rgba(0,0,0,.55));position:relative;z-index:1;border-radius:14px}
+.hdr .t{position:relative;z-index:1}
+.hdr .t h1{font-size:42px;font-weight:900;line-height:.9}
+.hdr .t h1 span{color:var(--cyan2)}
+.hdr .t p{color:#cfe0f5;font-size:15px;margin-top:7px;font-weight:500;letter-spacing:.4px}
+.herofoot{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:13px}
+.badge{display:inline-block;background:var(--lime);color:#172a06;font-weight:800;text-transform:uppercase;font-size:13px;padding:5px 14px;border-radius:30px;letter-spacing:1.2px}
+.loc{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:5px 14px 5px 10px;border-radius:30px;font-weight:600;font-size:14px;color:#dbe9ff;letter-spacing:.5px}
+.loc svg{width:16px;height:16px;display:block}
+.note-top{font-size:14.5px;color:#cfe0f5;margin:0 0 26px;line-height:1.55;background:var(--cardbg);backdrop-filter:blur(13px);-webkit-backdrop-filter:blur(13px);border-radius:14px;padding:14px 17px;box-shadow:var(--soft);font-weight:400}
+.note-top b{color:#eaf3ff;font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:30px}
+.kpi{background:var(--cardbg);backdrop-filter:blur(13px) saturate(135%);-webkit-backdrop-filter:blur(13px) saturate(135%);border-radius:16px;padding:17px 19px;box-shadow:var(--soft)}
+.kpi .n{font-weight:900;font-size:42px;line-height:1}
+.kpi .l{font-size:12.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;margin-top:5px;font-weight:600}
+.kpi.green .n{color:var(--green)}.kpi.amber .n{color:var(--amber)}.kpi.cyan .n{color:var(--cyan2)}.kpi.red .n{color:var(--red)}
+.cat{background:var(--cardbg);backdrop-filter:blur(13px) saturate(135%);-webkit-backdrop-filter:blur(13px) saturate(135%);border-radius:16px;overflow:hidden;margin-bottom:18px;box-shadow:var(--soft)}
+.cat h3{font-size:20px;font-weight:800;padding:13px 18px;text-transform:uppercase;letter-spacing:.7px;background:linear-gradient(90deg,rgba(255,255,255,.05),transparent);display:flex;align-items:center;gap:10px}
+.cat.c-di{--accent:var(--di)}.cat.c-d{--accent:var(--dd)}.cat.c-c{--accent:var(--cc)}.cat.c-fem{--accent:var(--fem)}.cat.c-ab{--accent:var(--ab)}
+.cat h3 .accent{color:var(--accent,var(--cyan2))}
+.gwrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px;padding:15px}
+.gbox{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.008));border-radius:13px;padding:12px 15px}
+.gbox .gh{font-weight:800;color:var(--accent,var(--lime));text-transform:uppercase;font-size:15px;margin-bottom:8px;letter-spacing:.6px}
+.gbox ul{list-style:none}.gbox li{font-size:15px;color:#e0eaf8;padding:3px 0;display:flex;gap:8px;font-weight:400;letter-spacing:.3px}
+.gbox li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent,var(--cyan));margin-top:8px;flex:none}
+@media(max-width:720px){.gwrap{grid-template-columns:1fr}}
+.wkh2{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:18px 0 14px;padding:4px 4px 11px}
+.wkh2 b{font-weight:900;font-size:28px;text-transform:uppercase;color:var(--cyan2)}
+.wkh2 span{color:#cfe0f5;font-size:15px}
+.wkh2 em{margin-left:auto;font-style:normal;font-weight:700;color:#172a06;background:var(--lime);font-size:13px;text-transform:uppercase;padding:3px 13px;border-radius:20px;letter-spacing:.5px}
+.daywrap{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.day{background:var(--cardbg);backdrop-filter:blur(13px) saturate(135%);-webkit-backdrop-filter:blur(13px) saturate(135%);border-radius:15px;overflow:hidden;box-shadow:var(--soft)}
+.dayh{background:linear-gradient(90deg,rgba(255,255,255,.06),transparent);padding:10px 16px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;font-size:16px;color:#fff}
+.slot{display:flex;align-items:center;gap:10px;padding:9px 16px;font-size:14px}
+.slot+.slot{box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+.time{font-weight:800;color:var(--lime);min-width:56px;font-size:15px}
+.court{color:var(--cyan2);font-size:11.5px;min-width:52px;text-transform:uppercase;font-weight:600}
+.cat2{font-weight:700;color:#9fb6d6;min-width:92px;text-transform:uppercase;font-size:12px}
+.match{color:#eaf3ff;flex:1;font-weight:500;letter-spacing:.3px}.match i{color:var(--muted);font-style:normal;font-size:12px;font-weight:400}
+@media(max-width:720px){.daywrap{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.hdr{flex-direction:column;text-align:center}}
+.foot{display:flex;align-items:center;justify-content:center;gap:11px;text-align:center;color:#6a82a8;font-size:13px;margin-top:44px;padding-top:20px;letter-spacing:1.3px;text-transform:uppercase;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.foot img{width:32px;opacity:.85;border-radius:7px}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+@media print{
+ body{padding:8px 6px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .wrap{max-width:100%}
+ .cat,.day,.kpi,.catsec,.mbox,.gbox,.pcard,.note-top{break-inside:avoid;page-break-inside:avoid}
+ .hdr{break-inside:avoid}
+ .bracket{overflow:visible}
+ a{color:inherit}
+}
+@page{margin:10mm;background:#081427}
+@media print{section:not(:first-of-type){break-before:page;page-break-before:always}}
+
+.wkh2{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin:14px 0 12px;border-bottom:2px solid var(--line);padding-bottom:8px}
+.wkh2 b{font-family:'Barlow Condensed';font-weight:900;font-size:24px;text-transform:uppercase;color:var(--cyan2)}
+.wkh2 span{color:#cdd9ec;font-size:14px}.wkh2 em{margin-left:auto;font-style:normal;font-family:'Barlow Condensed';font-weight:700;color:var(--lime);font-size:13px;text-transform:uppercase}
+.daywrap{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.day{background:var(--navy2);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.dayh{background:var(--navy3);padding:8px 14px;font-family:'Barlow Condensed';font-weight:800;text-transform:uppercase;letter-spacing:.5px;font-size:15px;color:#fff}
+.slot{display:flex;align-items:center;gap:9px;padding:7px 14px;border-bottom:1px solid rgba(255,255,255,.05);font-size:12.5px}
+.slot:last-child{border-bottom:none}
+.time{font-family:'Barlow Condensed';font-weight:800;color:var(--lime);min-width:54px;font-size:13px}
+.court{font-family:'Barlow Condensed';color:var(--cyan2);font-size:10.5px;min-width:54px;text-transform:uppercase}
+.cat2{font-family:'Barlow Condensed';font-weight:700;color:#9fb4d4;min-width:92px;text-transform:uppercase;font-size:11px}
+.match{color:#eaf1fb;flex:1}.match i{color:var(--muted);font-style:normal;font-size:10px}
+@media(max-width:720px){.daywrap{grid-template-columns:1fr}}
+.cat{background:var(--navy2);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:14px}
+.cat h3{background:var(--navy3);font-size:16px;font-weight:800;padding:10px 14px;font-family:'Barlow Condensed';text-transform:uppercase}
+.gwrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:12px}
+.gbox{background:rgba(0,0,0,.15);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.gbox .gh{font-family:'Barlow Condensed';font-weight:800;color:var(--lime);text-transform:uppercase;font-size:13px;margin-bottom:5px}
+.gbox ul{list-style:none;margin:0;padding:0}.gbox li{font-size:13px;color:#dbe6f7;padding:2px 0}
+@media(max-width:720px){.gwrap{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<div class="hdr"><img src="smt_brand_logo.png" alt="SMT"><div class="t"><h1>ROL · SEMANA 4<br><span>TORNEO SMT 2026</span></h1><p>6 jul – 12 jul · Round Robin</p><div class="herofoot"><span class="badge">Rol semanal</span><span class="loc"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-7.1 7-12.2C19 5.6 15.9 2.6 12 2.6 8.1 2.6 5 5.6 5 9.8 5 14.9 12 22 12 22z" fill="#ccff00"/><circle cx="12" cy="10" r="2.5" fill="#0e2240"/></svg>Centro Tenístico</span></div></div></div><p class="note-top">Cada jugador juega <b>1 partido esta semana</b>. Horarios: Lun–Vie 6:00 y 8:00 pm · Sáb–Dom 9:00 y 11:00 am · los viernes hay cancha extra. Acomoden el día/hora dentro de su categoría.</p><section><div class="wkh2"><b>Semana 4</b><span>6 jul – 12 jul</span><em>17 juegos</em></div><div class="daywrap"><div class="day"><div class="dayh">Lunes 6/jul</div><div class="slot"><span class="time">6:00 pm</span><span class="court">Cancha 1</span><span class="cat2">Di Varonil · Grupo B</span><span class="match">Alejandro Luna <i>vs</i> Federico Reyes</span></div><div class="slot"><span class="time">6:00 pm</span><span class="court">Cancha 2</span><span class="cat2">C Varonil · Grupo B</span><span class="match">Emmanuel Ávila <i>vs</i> José Ángel Puga</span></div><div class="slot"><span class="time">8:00 pm</span><span class="court">Cancha 1</span><span class="cat2">C Varonil · Grupo C</span><span class="match">Ángel Arias <i>vs</i> Israel Rague</span></div><div class="slot"><span class="time">8:00 pm</span><span class="court">Cancha 2</span><span class="cat2">C Varonil · Grupo C</span><span class="match">Mauricio Franco <i>vs</i> Alejandro Camacho</span></div></div><div class="day"><div class="dayh">Martes 7/jul</div><div class="slot"><span class="time">6:00 pm</span><span class="court">Cancha 1</span><span class="cat2">D Varonil · Grupo A</span><span class="match">Alberto Ibarra <i>vs</i> David Alfonso</span></div><div class="slot"><span class="time">6:00 pm</span><span class="court">Cancha 2</span><span class="cat2">D Varonil · Grupo A</span><span class="match">Edwin Rodríguez <i>vs</i> Daniel Cano</span></div><div class="slot"><span class="time">8:00 pm</span><span class="court">Cancha 1</span><span class="cat2">D Varonil · Grupo B</span><span class="match">Brandon Villarreal <i>vs</i> Raúl Falcón</span></div><div class="slot"><span class="time">8:00 pm</span><span class="court">Cancha 2</span><span class="cat2">D Varonil · Grupo B</span><span class="match">Pepe Gómez <i>vs</i> Salvador Garza</span></div></div><div class="day"><div class="dayh">Miércoles 8/jul</div><div class="slot"><span class="time">6:00 pm</span><span class="court">Cancha 1</span><span class="cat2">D Varonil · Grupo C</span><span class="match">Luis Emilio de la Rosa <i>vs</i> Jesús Guajardo</span></div><div class="slot"><span class="time">6:00 pm</span><span class="court">Cancha 2</span><span class="cat2">D Varonil · Grupo C</span><span class="match">Waka Martínez <i>vs</i> Gustavo Pérez</span></div><div class="slot"><span class="time">8:00 pm</span><span class="court">Cancha 1</span><span class="cat2">D Varonil · Grupo D</span><span class="match">Enrique Cruz <i>vs</i> Jesús Pernalete</span></div><div class="slot"><span class="time">8:00 pm</span><span class="court">Cancha 2</span><span class="cat2">D Varonil · Grupo D</span><span class="match">Yarin Álvarez <i>vs</i> Juan Carlos Merino</span></div></div><div class="day"><div class="dayh">Jueves 9/jul</div><div class="slot"><span class="time">6:00 pm</span><span class="court">Cancha 1</span><span class="cat2">D Varonil · Grupo E</span><span class="match">Alejandro Reyna <i>vs</i> Diego V</span></div><div class="slot"><span class="time">6:00 pm</span><span class="court">Cancha 2</span><span class="cat2">D Varonil · Grupo E</span><span class="match">José Á. Núñez <i>vs</i> Chaba Saldaña</span></div><div class="slot"><span class="time">8:00 pm</span><span class="court">Cancha 1</span><span class="cat2">Di Varonil · Grupo A</span><span class="match">Ivan Morales <i>vs</i> Alonso Salas</span></div><div class="slot"><span class="time">8:00 pm</span><span class="court">Cancha 2</span><span class="cat2">Di Varonil · Grupo B</span><span class="match">José Ramos <i>vs</i> Roberto de la Rosa</span></div></div><div class="day"><div class="dayh">Viernes 10/jul</div><div class="slot"><span class="time">6:00 pm</span><span class="court">Cancha 1</span><span class="cat2">C Varonil · Grupo B</span><span class="match">Yox Flores <i>vs</i> Gustavo Aguilar</span></div></div></div></section><div class="foot"><img src="smt_brand_logo.png">Sociedad Mexicana de Tenis · Gran Torneo 2026 · Centro Tenístico</div></div></body></html>
