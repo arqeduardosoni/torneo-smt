@@ -47,6 +47,12 @@ h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;lett
 .foot{margin-top:34px;display:flex;align-items:center;gap:10px;justify-content:center;color:var(--muted);font-size:13px}
 .foot img{width:30px;border-radius:7px}
 @media(max-width:560px){.hdr{flex-direction:column;text-align:center;gap:14px}.hdr .t h1{font-size:34px}.herofoot{justify-content:center}}
+
+@keyframes smtUp{from{opacity:0;transform:translateY(26px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes smtGlow{0%,100%{filter:drop-shadow(0 10px 26px rgba(0,0,0,.55))}50%{filter:drop-shadow(0 0 22px rgba(204,255,0,.55))}}
+.hdr img{animation:smtGlow 3s ease-in-out infinite}
+.badge{animation:smtUp .6s .1s both}
+.preanim{opacity:0}.preanim.in{animation:smtUp .6s cubic-bezier(.2,.75,.3,1) forwards}
 </style>
 </head>
 <body>
@@ -81,5 +87,5 @@ h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;lett
 
   <div class="foot"><img src="smt_brand_logo.png" alt="SMT">Sociedad Mexicana de Tenis · Gran Torneo 2026</div>
 </div>
-</body>
+<script>window.smtCascade=function(sel){var els=[].slice.call(document.querySelectorAll(sel));var i=0;els.forEach(function(e){e.classList.add("preanim");e.style.animationDelay=(Math.min(i,20)*70)+"ms";void e.offsetWidth;e.classList.add("in");i++;});};document.addEventListener("DOMContentLoaded",function(){window.smtCascade(".hdr,.note,.sec-t,.card");});</script></body>
 </html>
